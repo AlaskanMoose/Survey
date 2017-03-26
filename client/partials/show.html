@@ -1,0 +1,19 @@
+<div ng-controller= "showController">
+  <table class="table table-striped">
+    <thead>
+      <th>Option</th>
+      <th>Number of votes</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="option in poll.options track by $index ">
+        <td>{{option.text}}</td>
+        <td>{{option.votes}}</td>
+        <td>
+          <a ng-click="vote(poll._id , option._id)">Vote</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="#!/dash">return</a>
+</div>

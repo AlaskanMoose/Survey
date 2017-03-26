@@ -1,0 +1,30 @@
+<div ng-controller='pollsController'>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand">Dashboard</a>
+	    </div>
+	    <ul class="nav navbar-nav">
+	      <li class="active" ><a href="#!/new">Create New Poll</a></li>
+	      <li><a ng-controller="usersController" ng-click="logOut()" href="#">Logout</a></li>
+	    </ul>
+	  </div>
+	</nav>
+    <h1>Polls</h1>
+		<table class="table table-striped">
+			<thead>
+			  <th>Name</th>
+				<th>Survey Question</th>
+				<th>Date Posted</th>
+				<th>Action</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="poll in polls | orderBy: 'createdAt'  ">
+				  <td>{{poll._user.name}}</td>
+					<td><a href= "#!/polls/{{poll._id}}">{{poll.question}}</a></td>
+					<td>{{poll.createdAt}}</td>
+					<td><a href="#!/dash" ng-click="delete(poll._id)">Delete</a></td>
+				</tr>
+			</tbody>
+		</table>
+</div>

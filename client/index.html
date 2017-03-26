@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+  <head>
+    <title>Belt_Exam</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src=angular/angular.js></script>
+    <script src=angular-route/angular-route.js></script>
+    <script src="apps.js"></script>
+    <script src="./factories/usersFactory.js"></script>
+    <script src="./factories/pollsFactory.js"></script>
+    <script src="./controllers/usersController.js"></script>
+    <script src="./controllers/pollsController.js"></script>
+    <script src="./controllers/showController.js"></script>
+  </head>
+  <body class="container">
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-10" ng-view></div>
+      <div class="col-sm-2"></div>
+    </div>
+  </body>
+</html>
